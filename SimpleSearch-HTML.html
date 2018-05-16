@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  background: #001a66;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background: #C1DAD7;  
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1 style="font-size:125%;">Search Details</h1>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+    <form>
+      <input id="filterTable-input" data-type="search" placeholder="SEARCH(Client Name / Policy Number)" style="background-color:#001a66">
+    </form>
+    <table data-role="table" data-mode="columntoggle" id="myTable" data-filter="true" data-input="#filterTable-input">
+      <thead>
+		  <tr style="background-color:#001a66">
+			<th style="font-size:125%;">Name & Phone Number</th>
+			<th style="font-size:125%;">Email Id</th>
+			<th style="font-size:125%;">Policy Number</th>
+		  </tr>
+      </thead>
+      <tbody>
+		  <tr>
+			<td style="font-size:140%;">Ann Libmann</td>			
+		  </tr>
+		  <tr>
+			<td>+27-61-453-5444</td>
+			<td>ann.lib@gmail.com</td>
+			<td>0013983887</td>
+		  </tr>		  
+		  <tr>
+			<td style="font-size:140%;">Ameer</td>
+		  </tr>
+		  <tr>
+			<td>+27-61-453-7444</td>
+			<td>ameer@gmail.com</td>
+			<td>0013983890</td>
+		  </tr>			  
+		  <tr>
+			<td style="font-size:140%;">Kadar</td>			
+		  </tr>
+		  <tr>
+			<td>+27-61-345-5444</td>
+			<td>kadar@gmail.com</td>
+			<td>0013983762</td>
+		  </tr>			  		  
+		  <tr>
+			<td style="font-size:140%;">Annbelle Samuel</td>			
+		  </tr>
+		  <tr>
+			<td>+27-61-678-4455</td>
+			<td>annbelle.sam@gmail.com</td>
+			<td>0013983889</td>
+		  </tr>	
+		  <tr>
+			<td style="font-size:140%;">Sheik</td>
+		  </tr>
+		  <tr>
+			<td>+27-61-345-7865</td>
+			<td>sheik@gmail.com</td>
+			<td>0013983760</td>
+		  </tr>			  
+		  <tr>
+			<td style="font-size:140%;">Mohammed</td>
+		  </tr>
+		  <tr>
+			<td>+27-61-453-6543</td>
+			<td>mohammed@gmail.com</td>
+			<td>0013983772</td>
+		  </tr>			  
+
+      </tbody>
+    </table>
+  </div>
+</div> 
+
+</body>
+</html>

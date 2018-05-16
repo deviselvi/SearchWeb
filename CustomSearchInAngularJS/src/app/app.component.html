@@ -1,0 +1,33 @@
+<header>
+  <nav class="navbar navbar-default">
+    <a class="navbar-brand" href="#">Insurance</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="row">
+    <nav class="navbar">
+      <input class="form-control" type="text" name="search" [(ngModel)]="filter" id="search" placeholder="SEARCH(Client Name / Policy Number)">      
+    </nav>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th (click)="sort('name')">Name
+            <span class="glyphicon sort-icon" *ngIf="key =='name'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th (click)="sort('poilcynumber')">Policy Number
+            <span class="glyphicon sort-icon" *ngIf="key =='poilcynumber'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let insurance details | orderBy: key : reverse | filter:filter | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+          <td>{{insurance.name}}</td>
+          <td>{{insurance.poilcynumber}}</td>
+        </tr>
+      </tbody>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </table>
+  </div>
+</div>
